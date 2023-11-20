@@ -1,0 +1,287 @@
+/*1.	La resolución de la plantilla es de 960 px.
+2.	Los colores serán aproximados.
+3.	El tipo de letra es Arial. Excepto el texto del logotipo que debe ser un tipo personalizado (descargar cualquier tipo de letra).
+4.	El alto del encabezado es de 200px.
+5.	El resto de las secciones se adaptan al contenido verticalmente.
+6.	La galería central debe escalarse a 1.3, a través de una transición.
+7.	El menú desplegable debe escalarse, partiendo de una opacidad de 0 y una escala de 0.5.
+8.	El footer debe tener un degradado con colores aproximados.
+ */
+*{
+    padding: 0%;
+    margin:0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 960px;
+    margin: 0px auto;
+    border: 1px, solid, black;
+}
+/* * * * * * *Header * * * * * */
+.logo{  
+    width: 200px;
+    height: 150px;
+    background-image: url(img/logo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+header{
+    display: flex;
+    position: relative;
+    height: 143px;
+    width: 960px;
+    padding-top:1%;
+}
+
+.curso{
+    float: right;
+    font-size: 3em;
+    margin: 0%;
+    color:rgb(170, 6, 6);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.diseño{
+    color:rgb(62, 0, 100);
+    font-size: 2em;
+    margin: 0%;
+    margin-top: 15px;
+}
+
+.contactos_arriba_derecha{
+    margin-top: 3%;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.caja_telefono{
+    border: 1px black solid;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 50px;
+}
+.caja_telefono2{
+    display: flex;
+    padding-right: 50px;
+}
+.imagen_telefono{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-image: url(img/tlf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.caja_correo{
+    border: 1px black solid;
+    border-radius: 4px;
+    display: inline-block;
+    padding-right: 20px;
+}
+.caja_correo2{
+    display: flex;
+}
+
+.imagen_correo{
+    width: 15px;
+    height: 15px;
+    background-image: url(img/mail.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+}
+
+/* * * * * * *  Nav  * * * * * */
+.barra_fuxia{
+    background-color: rgb(203, 17, 67);
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom:3px;
+    padding-top:3px;
+}
+
+.texto_buscador{
+    float: left;
+    color: rgb(255, 255, 255);
+    padding-right:10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buscador{
+    float: right;
+    margin-right: 10px;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+
+/* Menus y subemnus del nav*/
+
+ul#menu{
+	position: absolute;	
+	width: 960px;
+	list-style-type: none;
+	background-color: rgb(255, 0, 72);
+}
+
+ul#menu >li{
+    float: left;
+}
+
+ul#menu a{
+	display: block;
+	color:  #ffffff;
+	font: bold 12px Arial;
+	text-decoration: none;
+	padding: 10px 25px;
+	text-transform: uppercase;
+}
+
+ul#menu ul a{
+	width: 130px;
+	text-transform: none;
+}
+
+ul#menu >li:hover a{
+	color: #540f0d;
+}
+
+ul#menu li ul{
+	position: absolute;
+	list-style-type: none;
+	border-radius: 5px;
+    background-color: white;
+	box-shadow: 2px 2px 20px #060606, 2px 2px 20px #060606;
+    border: 0.5px solid GREY;
+    font-family: bold Arial;
+	transform: scale(0.0);
+	opacity: 0;
+	transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+}
+
+/* Submenu Sedes */
+ul#menu ul ul{
+	top: 75px;
+	left: 140px;
+}
+
+ul#menu ul li:last-child{
+	box-shadow: none;
+}
+
+/* Sombreado cuando lo dejo encima */
+ul#menu a:hover{
+	background-color:#c4352e;
+	color: white; 
+}
+
+/* Barra negra main */
+.barra_negra_main{
+    background-color: #060606;
+    margin-top: 33px;
+    height: 20px;
+    width: 960px;
+}
+
+
+
+/* Aparece menu cuando lo dejamos encima*/
+ul#menu li:hover >ul{
+	visibility: visible;
+	opacity: 1;
+	transform: scale(0.5);
+    -webkit-transform: scale(1.0);
+    margin-left: -10px;
+}
+
+.contacto{
+    margin-left:500px;
+}
+
+/* * * * * * * * main * * * * * * */
+
+.main{
+    background-image: url(img/fondo.jpg);
+    width: 960px;
+    height: 500px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 30px;
+    margin-top: -30px;
+}
+
+
+section#dentromain article{
+	float: left;
+    margin-top: 60px;
+    margin-left: 50px;
+    background-image: url(img/fondo.png);
+    background-repeat: no-repeat;
+	background-size: 150px 100px;
+	background-position: center bottom;
+    border-radius: 10px;
+    width: 230px;
+    height: 165px;
+    box-shadow: 1px 2px #060606;
+	border: solid 1px rgb(255, 255, 255);
+}
+
+section#dentromain article:hover{
+	transform: scale(1.3);
+	transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+}
+/* dentro cuadrado*/
+section#dentromain article p{
+	padding-top: 10px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	border-bottom: 2px solid #790408;
+	width: 80%;
+	margin-left: 30px;
+}
+
+
+/* footer */
+
+footer{
+    background: linear-gradient(to left,blue,rgb(63, 140, 249));
+    width: 960px;
+    display: inline-block;
+}
+
+.titulosFooter{
+    color:white;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.articuloIzda{
+float: left;
+margin-left: 180px;
+color: white;
+padding: 3px;
+}
+
+.articuloDcha{
+float: right;
+margin-right: 200px;
+color: white;
+}
+
+footer p{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
